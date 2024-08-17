@@ -1,0 +1,149 @@
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #444;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-card {
+    background: #555;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.game-card h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+/* Navigation Bar */
+header {
+    background: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #28a745;
+}
+
+/* About & Contact Pages */
+section.about, section.contact {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+section.about h2, section.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+section.about p, section.contact form {
+    font-size: 16px;
+    line-height: 1.6;
+  
+}
+
+/* Contact Form */
+section.contact .input-group {
+    margin-bottom: 15px;
+}
+
+section.contact .input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+section.contact .input-group input, 
+section.contact .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #444;
+    color: #fff;
+}
+
+section.contact textarea {
+    height: 100px;
+}
+
+/* Footer */
+footer {
+    background: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #28a745;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
