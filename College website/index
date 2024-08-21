@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>XYZ College</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#campus">Campus Life</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="hero-content">
+            <h2>Welcome to the Future of Education</h2>
+            <p>Explore limitless possibilities at XYZ College</p>
+            <a href="#about" class="cta-button">Discover More</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>XYZ College is a forward-thinking institution, dedicated to empowering students with cutting-edge knowledge and skills.</p>
+    </section>
+
+    <section id="programs" class="programs-section">
+        <h2>Programs Offered</h2>
+        <div class="program-list">
+            <div class="program-item">
+                <h3>Computer Science</h3>
+                <p>Join the future of technology with our comprehensive Computer Science program.</p>
+            </div>
+            <div class="program-item">
+                <h3>Business Administration</h3>
+                <p>Develop leadership and management skills to excel in the business world.</p>
+            </div>
+            <div class="program-item">
+                <h3>Engineering</h3>
+                <p>Innovate and create solutions for tomorrow's challenges in our Engineering programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="admissions" class="admissions-section">
+        <h2>Admissions</h2>
+        <p>Join XYZ College and be part of an educational revolution. Apply today!</p>
+        <a href="#" class="cta-button">Apply Now</a>
+    </section>
+
+    <section id="campus" class="campus-section">
+        <h2>Campus Life</h2>
+        <p>Experience a vibrant campus life with a diverse community, modern facilities, and endless opportunities.</p>
+    </section>
+
+    <section id="faculty" class="faculty-section">
+        <h2>Our Faculty</h2>
+        <p>Learn from world-class educators and industry experts who are passionate about your success.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 XYZ College. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="college-script.js"></script>
+</body>
+</html>
