@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Fever</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Cricket Fever</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#game">The Game</a></li>
+                <li><a href="#players">Players</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="hero">
+            <h2>Welcome to the Ultimate Cricket Experience</h2>
+            <p>Play, Compete, and Conquer!</p>
+            <a href="#game" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section id="game" class="game-section">
+        <h2>About the Game</h2>
+        <p>Experience cricket like never before with realistic gameplay, stunning graphics, and a variety of game modes.</p>
+        <div class="features">
+            <div class="feature">
+                <h3>Realistic Gameplay</h3>
+                <p>Feel the thrill of cricket with true-to-life physics and dynamic controls.</p>
+            </div>
+            <div class="feature">
+                <h3>Multiple Game Modes</h3>
+                <p>Choose from quick matches, tournaments, and more.</p>
+            </div>
+            <div class="feature">
+                <h3>Stunning Graphics</h3>
+                <p>Immerse yourself in the game with high-definition graphics and detailed animations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="players" class="players-section">
+        <h2>Top Players</h2>
+        <div class="player-cards">
+            <div class="player-card">
+                <img src="player1.jpg" alt="Player 1">
+                <h3>Player 1</h3>
+                <p>Batsman</p>
+            </div>
+            <div class="player-card">
+                <img src="player2.jpg" alt="Player 2">
+                <h3>Player 2</h3>
+                <p>Bowler</p>
+            </div>
+            <div class="player-card">
+                <img src="player3.jpg" alt="Player 3">
+                <h3>Player 3</h3>
+                <p>All-rounder</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cricket Fever. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
