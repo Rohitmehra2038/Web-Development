@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 20px 0;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header .logo {
+            float: left;
+        }
+
+        .header .logo img {
+            height: 50px;
+        }
+
+        .header .nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        .header .nav a {
+            color: #00695c;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .header .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            position: relative;
+            font-size: 48px;
+            margin: 0;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            position: relative;
+            font-size: 20px;
+            margin: 20px 0;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero .btn {
+            position: relative;
+            background-color: #009688;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-transform: uppercase;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .hero .btn:hover {
+            background-color: #00796b;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Welcome Section */
+        .welcome {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .welcome h2 {
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            font-size: 18px;
+            color: #555555;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            background-color: #f0f4f4;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 40px;
+        }
+
+        .services .service-item {
+            width: 30%;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0 10px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .services .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .services .service-item h3 {
+            font-size: 24px;
+            color: #00695c;
+            margin-bottom: 15px;
+        }
+
+        .services .service-item p {
+            font-size: 16px;
+            color: #555555;
+        }
+
+        @media (max-width: 768px) {
+            .services .service-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Doctors Section */
+        .doctors {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .doctors h2 {
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 40px;
+        }
+
+        .doctors .doctor-item {
+            width: 30%;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0 10px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .doctors .doctor-item:hover {
+            transform: scale(1.05);
+        }
+
+        .doctors .doctor-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .doctors .doctor-item h3 {
+            font-size: 24px;
+            color: #00695c;
+            margin: 15px 0;
+        }
+
+        .doctors .doctor-item p {
+            font-size: 16px;
+            color: #555555;
+        }
+
+        @media (max-width: 768px) {
+            .doctors .doctor-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 40px;
+        }
+
+        .testimonials .testimonial-item {
+            width: 30%;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0 10px;
+            background-color: #f9fafa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonials .testimonial-item:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonials .testimonial-item blockquote {
+            font-size: 18px;
+            color: #555555;
+            margin: 0;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .testimonials .testimonial-item blockquote::before {
+            content: "\201C";
+            font-size: 60px;
+            color: #00695c;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+
+        .testimonials .testimonial-item blockquote::after {
+            content: "\201D";
+            font-size: 60px;
+            color: #00695c;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+        }
+
+        .testimonials .testimonial-item .author {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #777777;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials .testimonial-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* News Section */
+        .news {
+            padding: 60px 20px;
+            background-color: #f0f4f4;
+            text-align: center;
+        }
+
+        .news h2 {
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 40px;
+        }
+
+        .news .news-item {
+            width: 30%;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0 10px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news .news-item:hover {
+            transform: scale(1.05);
+        }
+
+        .news .news-item h3 {
+            font-size: 24px;
+            color: #00695c;
+            margin-bottom: 15px;
+        }
+
+        .news .news-item p {
+            font-size: 16px;
+            color: #555555;
+        }
+
+        @media (max-width: 768px) {
+            .news .news-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact form button {
+            background-color: #009688;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .contact form button:hover {
+            background-color: #00796b;
+        }
+
+        /* FAQs Section */
+        .faqs {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .faqs h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 40px;
+        }
+
+        .faqs .faq-item {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f9fafa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faqs .faq-item h3 {
+            font-size: 24px;
+            color: #00695c;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .faqs .faq-item p {
+            font-size: 16px;
+            color: #555555;
+            display: none;
+            margin-top: 10px;
+        }
+
+        .faqs .faq-item.active p {
+            display: block;
+        }
+
+        /* Partners Section */
+        .partners {
+            padding: 60px 20px;
+            background-color: #f0f4f4;
+            text-align: center;
+        }
+
+        .partners h2 {
+            font-size: 32px;
+            color: #00695c;
+            margin-bottom: 40px;
+        }
+
+        .partners .partners-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .partners .partner-item {
+            width: 30%;
+            max-width: 200px;
+        }
+
+        .partners .partner-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partners .partner-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .partners .partner-item {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        /* Footer Section */
+        .footer {
+            padding: 40px 20px;
+            background-color: #00695c;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .footer .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-media {
+            margin-bottom: 20px;
+        }
+
+        .footer .social-media a {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .footer .social-media a:hover {
+            color: #ffee58;
+        }
+
+        .footer .footer-info {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer .footer-info p {
+            margin: 5px 0;
+        }
+
+        .footer .footer-info .address {
+            margin-bottom: 15px;
+        }
+
+        .footer .footer-info .phone {
+            margin-bottom: 5px;
+        }
+
+        .footer .footer-info .email {
+            margin-bottom: 5px;
+        }
+
+        .footer .footer-info .copyright {
+            font-size: 14px;
+            color: #eeeeee;
+        }
+
+        @media (max-width: 768px) {
+            .footer .footer-links,
+            .footer .social-media {
+                margin-bottom: 10px;
+            }
+
+            .footer .footer-links a,
+            .footer .social-media a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Hospital Logo">
+            </div>
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Departments</a>
+                <a href="#">Patient Resources</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Our Hospital</h1>
+        <p>Providing exceptional care and cutting-edge treatment with compassion and expertise.</p>
+        <a href="#" class="btn">Learn More</a>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Welcome to Our Hospital</h2>
+        <p>Our hospital is dedicated to providing the best possible care to our patients. With state-of-the-art facilities and a team of experienced professionals, we are committed to delivering exceptional medical services and improving the health and well-being of our community.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Emergency Care</h3>
+            <p>24/7 emergency services with experienced staff and advanced equipment.</p>
+        </div>
+        <div class="service-item">
+            <h3>Surgical Services</h3>
+            <p>Comprehensive surgical care, including general and specialized surgeries.</p>
+        </div>
+        <div class="service-item">
+            <h3>Diagnostic Imaging</h3>
+            <p>State-of-the-art imaging services for accurate diagnosis and treatment.</p>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors">
+        <h2>Meet Our Doctors</h2>
+        <div class="doctor-item">
+            <img src="doctor1.jpg" alt="Doctor 1">
+            <h3>Dr. John Smith</h3>
+            <p>Cardiologist with 15 years of experience in heart health and treatment.</p>
+        </div>
+        <div class="doctor-item">
+            <img src="doctor2.jpg" alt="Doctor 2">
+            <h3>Dr. Emily Johnson</h3>
+            <p>Oncologist specializing in cancer treatment and patient care.</p>
+        </div>
+        <div class="doctor-item">
+            <img src="doctor3.jpg" alt="Doctor 3">
+            <h3>Dr. Michael Brown</h3>
+            <p>Orthopedic surgeon focusing on musculoskeletal health and recovery.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Patient Testimonials</h2>
+        <div class="testimonial-item">
+            <blockquote>
+                "The care I received at the hospital was exceptional. The staff was compassionate, and the treatment was top-notch. I am very grateful for their support during my recovery."
+            </blockquote>
+            <div class="author">Jane Doe</div>
+        </div>
+        <div class="testimonial-item">
+            <blockquote>
+                "My experience was fantastic from start to finish. The doctors and nurses were very professional, and the facilities were clean and comfortable. Highly recommend this hospital!"
+            </blockquote>
+            <div class="author">John Smith</div>
+        </div>
+        <div class="testimonial-item">
+            <blockquote>
+                "I had a great experience with the hospital’s services. The staff was knowledgeable and caring, making my stay as pleasant as possible."
+            </blockquote>
+            <div class="author">Mary Johnson</div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <h2>Latest News</h2>
+        <div class="news-item">
+            <h3>New Cardiology Wing Opens</h3>
+            <p>We are excited to announce the opening of our new state-of-the-art cardiology wing, designed to provide advanced heart care and treatment.</p>
+        </div>
+        <div class="news-item">
+            <h3>Health Fair This Weekend</h3>
+            <p>Join us for our annual health fair this weekend, featuring free screenings, health information, and wellness activities for the whole family.</p>
+        </div>
+        <div class="news-item">
+            <h3>Community Outreach Program</h3>
+            <p>Our community outreach program aims to provide free medical services and health education to underserved areas.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What are your visiting hours?</h3>
+            <p>Our visiting hours are from 9:00 AM to 8:00 PM daily.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you accept insurance?</h3>
+            <p>Yes, we accept a variety of insurance plans. Please contact our billing department for more details.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I make an appointment?</h3>
+            <p>You can make an appointment by calling our office or using our online appointment system.</p>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <h2>Our Partners</h2>
+        <div class="partners-list">
+            <div class="partner-item">
+                <img src="partner1.png" alt="Partner 1">
+            </div>
+            <div class="partner-item">
+                <img src="partner2.png" alt="Partner 2">
+            </div>
+            <div class="partner-item">
+                <img src="partner3.png" alt="Partner 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Departments</a>
+            <a href="#">Patient Resources</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="social-media">
+            <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="footer-info">
+            <div class="address">
+                <p>123 Health Street, Welltown, WP 45678</p>
+            </div>
+            <div class="phone">
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="email">
+                <p>Email: contact@hospital.com</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Hospital Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome CDN for social media icons -->
+    <script>icons </script>
+
+    <script>
+        // FAQs Toggle Functionality
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
