@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Falling Objects</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #87CEEB; /* Sky blue background */
+        }
+        canvas {
+            display: block;
+            background: #f5f5f5; /* Light gray ground */
+        }
+        #startScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #000;
+        }
+        #startScreen h1 {
+            font-family: Arial, sans-serif;
+            font-size: 40px;
+        }
+        #playButton {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #playButton:active {
+            background: #0056b3;
+        }
+        #score, #gameOver {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #000;
+        }
+        #gameOver {
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Catch the Falling Objects</h1>
+        <button id="playButton">Play</button>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="score">Score: 0</div>
+    <div id="gameOver">Game Over! Press F5 to Restart</div>
+    <script src="game.js"></script>
+</body>
+</html>
