@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(13, 13, 13, 0.9);
+    border-bottom: 1px solid #444;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #00bfff;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bfff;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons input {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #ffffff;
+    outline: none;
+    margin-right: 20px;
+}
+
+.header-icons input::placeholder {
+    color: #888;
+}
+
+.social-icons img {
+    width: 24px;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('cosmic-background.jpg') no-repeat center center/cover;
+}
+
+.hero h2 {
+    font-size: 48px;
+    color: #00bfff;
+    text-shadow: 0px 0px 10px #00bfff;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.cta {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #00bfff;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta:hover {
+    background-color: #008ecc;
+    transform: scale(1.05);
+}
+
+.about-us, .services, .blog, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-us h2, .services h2, .blog h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00bfff;
+    text-shadow: 0px 0px 10px #00bfff;
+}
+
+.about-us p, .services p, .blog p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.learn-more, .book-session {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00bfff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.learn-more:hover, .book-session:hover {
+    background-color: #008ecc;
+    transform: scale(1.05);
+}
+
+.blog-post {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #ffffff;
+    outline: none;
+}
+
+.contact form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00bfff;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #008ecc;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    color: #888;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.quick-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+    color: #00bfff;
+}
+
+.social-payment {
+    text-align: left;
+}
+
+.social-payment h4 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.payment-icons img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
