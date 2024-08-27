@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro/Numero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Astro/Numero</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Numerology</a></li>
+                <li><a href="#">Astronomy</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <input type="text" placeholder="Search...">
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Discover the Mysteries of the Cosmos & Your Life Path</h2>
+        <p>Explore the synergy of Numerology and Astronomy.</p>
+        <button class="cta">Get Your Numerology Reading</button>
+        <button class="cta">Explore the Stars</button>
+    </section>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>We merge the ancient wisdom of numerology with the science of astronomy to help you understand your life path and the cosmos.</p>
+        <button class="learn-more">Learn More About Us</button>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Numerology Readings</h3>
+            <p>Get personalized numerology readings tailored to your life.</p>
+        </div>
+        <div class="service">
+            <h3>Astronomy Sessions</h3>
+            <p>Explore the stars with expert guidance and powerful telescopes.</p>
+        </div>
+        <button class="book-session">Book a Session</button>
+    </section>
+
+    <section class="blog">
+        <h2>Featured Blog Posts</h2>
+        <div class="blog-post">
+            <h3>How Numerology Can Impact Your Life</h3>
+            <p>Discover the powerful influence of numbers on your life's journey.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Understanding Your Star Chart</h3>
+            <p>A beginner's guide to reading and interpreting your star chart.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-payment">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+                <h4>Payment Options</h4>
+                <div class="payment-icons">
+                    <img src="paypal-icon.png" alt="PayPal">
+                    <img src="creditcard-icon.png" alt="Credit Card">
+                </div>
+            </div>
+        </div>
+        <p>© 2024 Astro/Numero. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
