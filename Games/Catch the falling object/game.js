@@ -97,6 +97,8 @@ function endGame() {
 let frameCount = 0;
 let animationFrameId;
 
+
+
 function gameLoop() {
     frameCount++;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
